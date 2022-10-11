@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "title": "오코끝",
+      "body": "오늘코딩끝",
+      "id": 1
+    },
+    {
+      "title": "타이틀",
+      "body": "바디",
+      "id": 4
+    },
+    {
+      "title": "간맥",
+      "body": "할까말까",
+      "id": 5
+    },
+    {
+      "title": "명령어 설명",
+      "body": "npm run start -> 리액트 앱 시작\nnpm run db -> json-server(가짜 웹 db 서버)를 포트 3001번으로 실행",
+      "id": 7
+    }
+  ]
+}
