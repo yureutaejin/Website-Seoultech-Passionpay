@@ -3,6 +3,7 @@ import CreatePage from './pages/CreatePage'
 import EditPage from './pages/EditPage'
 import ListPage from './pages/ListPage'
 import ShowPage from './pages/ShowPage'
+import InfoPage from './pages/InfoPage'
 
 const routes = [
     {
@@ -18,8 +19,8 @@ const routes = [
         component: CreatePage
     },
     {
-        path: '/blogs/edit',
-        component: EditPage
+        path: '/info',
+        component: InfoPage
     },
     {
         path: '/blogs/:id',
