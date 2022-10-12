@@ -53,8 +53,7 @@ const ListPage = () => {
                     </Link>
                 </div>
             </div>
-            {loading ? <LoadingSpinner /> : renderBlogList()
-            }
+            {loading ? <LoadingSpinner /> : renderBlogList()}
         </div>
     )
 }

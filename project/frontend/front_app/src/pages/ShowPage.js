@@ -17,21 +17,23 @@ const ShowPage = () => {
     }
     const renderContents = () => {
         return (
-            <div>
-                <h1>{title}</h1>
-                <div>{body}</div>
+            <div className="d-flex justify-content-between">
+                <div>
+                    <h1>{title}</h1>
+                    <div>{body}</div>
+                </div>
+                <div>
+                    <Link to={`/blogs/edit/${id}`} className="btn btn-secondary">
+                        Edit
+                    </Link>
+                </div>
             </div>
         )
     }
     useEffect(() => { getContents() }, [])
     return (
-        <div className="d-flex justify-content-between">
+        <div>
             {loading ? <LoadingSpinner /> : renderContents()}
-            <div>
-                <Link to={`/blogs/edit/${id}`} className="btn btn-secondary">
-                    Edit
-                </Link>
-            </div>
         </div>
     )
 }

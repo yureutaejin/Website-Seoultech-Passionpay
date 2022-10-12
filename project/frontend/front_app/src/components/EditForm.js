@@ -44,10 +44,10 @@ const EditForm = ({ id }) => {
                 />
             </div>
             <button
-                className="btn btn-secondary"
+                className="btn btn-primary"
                 onClick={onSubmit}
             >
-                Edit
+                Confirm
             </button>
         </div>
     )
