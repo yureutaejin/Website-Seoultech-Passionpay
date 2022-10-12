@@ -4,6 +4,7 @@ import EditPage from './pages/EditPage'
 import ListPage from './pages/ListPage'
 import ShowPage from './pages/ShowPage'
 import InfoPage from './pages/InfoPage'
+import NotiPage from './pages/NotiPage'
 
 const routes = [
     {
@@ -21,6 +22,10 @@ const routes = [
     {
         path: '/info',
         component: InfoPage
+    },
+    {
+        path: '/notification',
+        component: NotiPage
     },
     {
         path: '/blogs/:id',
