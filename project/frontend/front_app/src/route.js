@@ -3,8 +3,9 @@ import CreatePage from './pages/CreatePage'
 import EditPage from './pages/EditPage'
 import ListPage from './pages/ListPage'
 import ShowPage from './pages/ShowPage'
-import InfoPage from './pages/InfoPage'
+import ProjectPage from './pages/ProjectPage'
 import NotiPage from './pages/NotiPage'
+import HistoryPage from './pages/HistoryPage'
 
 const routes = [
     {
@@ -12,23 +13,32 @@ const routes = [
         component: HomePage
     },
     {
-        path: '/blogs',
-        component: ListPage
-    },
-    {
-        path: '/blogs/create',
-        component: CreatePage
-    },
-    {
-        path: '/info',
-        component: InfoPage
-    },
-    {
         path: '/notification',
         component: NotiPage
     },
     {
-        path: '/blogs/:id',
+        path: '/project',
+        component: ProjectPage
+    },
+    {
+        path: '/history',
+        component: HistoryPage
+    },
+    {
+        path: '/blogs',
+        component: ListPage
+    },
+    // {
+    //     path: '/blogs/create',
+    //     component: CreatePage
+    // },
+    
+    {
+        path: '/:type/create',
+        component: CreatePage
+    },
+    {
+        path: '/:type/:id',
         component: ShowPage
     },
     {

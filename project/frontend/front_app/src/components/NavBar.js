@@ -1,7 +1,7 @@
 import {
-    Link,
-    NavLink
+    Link
 } from 'react-router-dom'
+import NavButton from './NavButton'
 
 const NavBar = () => {
     return (
@@ -9,26 +9,11 @@ const NavBar = () => {
             <div className="container">
                 <Link className="navbar-brand" to="/">Home</Link>
                 <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <NavLink
-                            activeClassName='active'
-                            className="nav-link"
-                            aria-current="page"
-                            to="/info"
-                        >
-                            Info
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink
-                            activeClassName='active'
-                            className="nav-link"
-                            aria-current="page"
-                            to="/blogs"
-                        >
-                            Forum
-                        </NavLink>
-                    </li>
+                    <NavButton name='로그인' to='/login'/>
+                    <NavButton name='공지사항' to='notification'/>
+                    <NavButton name='프로젝트' to='/project'/>
+                    <NavButton name='활동기록' to='/history'/>
+                    <NavButton name='정보공유' to='/blogs'/>
                 </ul>
             </div>
         </nav>

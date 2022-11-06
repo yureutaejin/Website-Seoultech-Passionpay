@@ -5,11 +5,17 @@ import LoadingSpinner from "../components/LoadingSpinner"
 
 const ShowPage = () => {
     const id = useParams().id
+    const type = useParams().type
+    const mode = {
+        "blogs" : "posts",
+        "notification" : "notidb"
+    }
+
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const [loading, setLoading] = useState(true)
     const getContents = () => {
-        axios.get(`http://localhost:3001/posts/${id}`).then((res) => {
+        axios.get(`http://localhost:3001/${mode[type]}/${id}`).then((res) => {
             setTitle(res.data.title)
             setBody(res.data.body)
             setLoading(false)
@@ -23,7 +29,7 @@ const ShowPage = () => {
                     <div>{body}</div>
                 </div>
                 <div>
-                    <Link to={`/blogs/edit/${id}`} className="btn btn-secondary">
+                    <Link to={`/${type}/edit/${id}`} className="btn btn-secondary">
                         Edit
                     </Link>
                 </div>

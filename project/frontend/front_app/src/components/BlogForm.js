@@ -2,17 +2,21 @@ import { useState } from "react"
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 
-const BlogForm = () => {
+const BlogForm = ({type}) => {
+    const mode = {
+        "blogs" : "posts",
+        "notification" : "notidb"
+    }
     const history = useHistory()
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const onSubmit = () => {
-        axios.post('http://localhost:3001/posts', {
+        axios.post(`http://localhost:3001/${mode[type]}`, {
             title,
             body
         }
         ).then(() => {
-            history.push("/blogs")
+            history.push(`/${type}`)
         })
     }
     return (

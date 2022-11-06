@@ -2,23 +2,27 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 
-const EditForm = ({ id }) => {
+const EditForm = ({ id,type }) => {
+    const mode = {
+        "blogs" : "posts",
+        "notification" : "notidb"
+    }
     const history = useHistory()
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const getOrigin = () => {
-        axios.get(`http://localhost:3001/posts/${id}`).then((res) => {
+        axios.get(`http://localhost:3001/${mode[type]}/${id}`).then((res) => {
             setTitle(res.data.title)
             setBody(res.data.body)
         })
     }
     const onSubmit = () => {
-        axios.put(`http://localhost:3001/posts/${id}`, {
+        axios.put(`http://localhost:3001/${mode[type]}/${id}`, {
             title,
             body
         }
         ).then(() => {
-            history.push(`/blogs/${id}`)
+            history.push(`/${type}/${id}`)
         })
     }
     useEffect(() => { getOrigin() }, [])
