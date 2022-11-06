@@ -2,8 +2,23 @@
   "posts": [
     {
       "title": "11월6일",
-      "body": "",
+      "content": "",
       "id": 1
+    },
+    {
+      "title": "",
+      "content": "dasd",
+      "id": 2
+    },
+    {
+      "title": "14455",
+      "content": "1234",
+      "id": 3
+    },
+    {
+      "title": "4:50",
+      "content": "<p>Hello from CKEditor 5! 제발</p>",
+      "id": 4
     }
   ],
   "notidb": []

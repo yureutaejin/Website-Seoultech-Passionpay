@@ -12,12 +12,12 @@ const ShowPage = () => {
     }
 
     const [title, setTitle] = useState("")
-    const [body, setBody] = useState("")
+    const [content, setContent] = useState("")
     const [loading, setLoading] = useState(true)
     const getContents = () => {
         axios.get(`http://localhost:3001/${mode[type]}/${id}`).then((res) => {
             setTitle(res.data.title)
-            setBody(res.data.body)
+            setContent(res.data.content)
             setLoading(false)
         })
     }
@@ -26,7 +26,7 @@ const ShowPage = () => {
             <div className="d-flex justify-content-between">
                 <div>
                     <h1>{title}</h1>
-                    <div>{body}</div>
+                    <div>{content}</div>
                 </div>
                 <div>
                     <Link to={`/${type}/edit/${id}`} className="btn btn-secondary">

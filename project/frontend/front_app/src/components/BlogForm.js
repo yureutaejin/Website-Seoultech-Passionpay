@@ -1,6 +1,8 @@
 import { useState } from "react"
 import axios from "axios"
 import { useHistory } from "react-router-dom"
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 const BlogForm = ({type}) => {
     const mode = {
@@ -9,11 +11,11 @@ const BlogForm = ({type}) => {
     }
     const history = useHistory()
     const [title, setTitle] = useState("")
-    const [body, setBody] = useState("")
+    const [content, setContent] = useState("")
     const onSubmit = () => {
         axios.post(`http://localhost:3001/${mode[type]}`, {
             title,
-            body
+            content
         }
         ).then(() => {
             history.push(`/${type}`)
@@ -31,13 +33,26 @@ const BlogForm = ({type}) => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Body</label>
-                <textarea
-                    className="form-control" value={body}
-                    onChange={(event) => {
-                        setBody(event.target.value)
-                    }}
-                    rows="20"
+                <label className="form-label">Content</label>
+                <CKEditor
+                    className="form-control"
+                    editor={ ClassicEditor }
+                    data="<p>Hello from CKEditor 5!</p>"
+                    onReady={ editor => {
+                        // You can store the "editor" and use when it is needed.
+                        console.log( 'Editor is ready to use!', editor );
+                    } }
+                    onChange={ ( event, editor ) => {
+                        const data = editor.getData();
+                        console.log( { event, editor, data } );
+                        setContent(data)
+                    } }
+                    onBlur={ ( event, editor ) => {
+                        console.log( 'Blur.', editor );
+                    } }
+                    onFocus={ ( event, editor ) => {
+                        console.log( 'Focus.', editor );
+                    } }
                 />
             </div>
             <button

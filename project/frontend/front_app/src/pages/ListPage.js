@@ -46,7 +46,7 @@ const ListPage = () => {
     return (
         <div>
             <div className="d-flex justify-content-between">
-                <h1>Forum</h1>
+                <h1>정보공유</h1>
                 <div>
                     <Link to="/blogs/create" className="btn btn-success">
                         Create New
