@@ -7,12 +7,12 @@
   - container 명은 docker ps를 통해서 조회
   - docker exec -it [container 이름] /bin/bash 로 각 container에 접근
   
-  *a. DB container (따로 할 것 없음)
-  *b. frontend container (구동 방식 추가 바람)
-  *c. backend container
+  - a DB container (따로 할 것 없음)
+  - b frontend container (구동 방식 추가 바람)
+  - c backend container
     1. container 내부 접근시 main.py가 있는 경로에서 "python db_init_setting.py" (추가 예정)
     2. 이후 backend web server 띄우기 -> "python main.py"
-    3. 각 API 접근은 " [구동한 환경의 ip or 로컬이라면 localhost]:8080/~~~~"
-    4. 각 API Swagger UI(document) 확인은 "[구동한 환경의 ip or 로컬이라면 localhost]:8080/docs"
-    5
+    3. 각 API 접근은 " [구동한 환경의 ip or 로컬이라면 localhost]:8080/~~~ "
+    4. API Swagger UI(document) 확인은 "[구동한 환경의 ip or 로컬이라면 localhost]:8080/docs"
+   
     
