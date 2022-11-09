@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: mariadb:latest
+    volumes:
+      - ${PWD}/db/:/var/lib/mysql
+    ports:
+      - 3306:3306
+    # expose:
+    #  - 3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=1q2w3e4r
+
+  backend:
+    restart: always
+    build:
+      context: ./dockerfile/backend
+      dockerfile: Dockerfile
+
+    ports:
+      - 8080:8080
+    volumes:
+      - ./backend/:/home/
+    command: tail -f /dev/null
+    depends_on:
+      - db
+  
+  frontend:
+    restart: always
+    build:
+      context: ./dockerfile/frontend
+      dockerfile: Dockerfile
+
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend/:/home/
+    depends_on:
+      - backend
+    command: tail -f /dev/null
