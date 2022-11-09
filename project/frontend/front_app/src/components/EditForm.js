@@ -3,16 +3,15 @@ import axios from "axios"
 import { useHistory } from "react-router-dom"
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import mode from './Mode';
 
 const EditForm = ({ id,type }) => {
-    const mode = {
-        "blogs" : "posts",
-        "notification" : "notidb"
-    }
     const history = useHistory()
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
+    
     const getOrigin = () => {
+        console.log(type)
         axios.get(`http://localhost:3001/${mode[type]}/${id}`).then((res) => {
             setTitle(res.data.title)
             setContent(res.data.content)
@@ -44,7 +43,7 @@ const EditForm = ({ id,type }) => {
                 <CKEditor
                     className="form-control"
                     editor={ ClassicEditor }
-                    data="<p>Hello from CKEditor 5!</p>"
+                    data={content}
                     onReady={ editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log( 'Editor is ready to use!', editor );

@@ -1,25 +1,31 @@
 {
   "posts": [
     {
-      "title": "11월6일",
+      "title": "제목",
       "content": "",
       "id": 1
     },
     {
-      "title": "",
-      "content": "dasd",
+      "title": "1234",
+      "content": "<p>안녕하세요.</p>",
       "id": 2
     },
     {
-      "title": "14455",
-      "content": "1234",
+      "title": "1234",
+      "content": "<p>왜 이러는걸까요</p>",
       "id": 3
-    },
-    {
-      "title": "4:50",
-      "content": "<p>Hello from CKEditor 5! 제발</p>",
-      "id": 4
     }
   ],
-  "notidb": []
+  "notidb": [
+    {
+      "title": "1234",
+      "content": "",
+      "id": 1
+    },
+    {
+      "title": "테스트",
+      "content": "<p>테스트123</p>",
+      "id": 2
+    }
+  ]
 }

@@ -8,7 +8,7 @@ const ShowPage = () => {
     const type = useParams().type
     const mode = {
         "blogs" : "posts",
-        "notification" : "notidb"
+        "notification" : "noztidb"
     }
 
     const [title, setTitle] = useState("")
