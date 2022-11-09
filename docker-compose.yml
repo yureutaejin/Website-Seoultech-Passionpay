@@ -14,7 +14,6 @@ services:
       - MYSQL_ROOT_PASSWORD=1q2w3e4r
 
   backend:
-    restart: always
     build:
       context: ./dockerfile/backend
       dockerfile: Dockerfile
@@ -28,7 +27,6 @@ services:
       - db
   
   frontend:
-    restart: always
     build:
       context: ./dockerfile/frontend
       dockerfile: Dockerfile

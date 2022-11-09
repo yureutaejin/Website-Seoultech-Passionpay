@@ -3,6 +3,8 @@ from models.model import Sign
 from sqlalchemy import and_, or_
 
 def signin(user_id, password, db: Session):
-    query_result = db.query(Sign).filter(and_(Sign.user_id==user_id, Sign.user_password==password)).all()
-    
-    return query_result
+    try:
+        res = (db.query(Sign).filter(and_(Sign.user_id==user_id, Sign.user_password==password)).all())[0]
+        return res.user_name
+    except:
+        return "wrong access!"
