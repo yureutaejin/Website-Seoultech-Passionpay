@@ -19,9 +19,9 @@ const BlogForm = ({type}) => {
     }
     return (
         <div>
-            <h1>Create a post</h1>
+            <h1>글 작성</h1>
             <div className="mb-3">
-                <label className="form-label">Title</label>
+                <label className="form-label">제목</label>
                 <input className="form-control" value={title}
                     onChange={(event) => {
                         setTitle(event.target.value)
@@ -29,7 +29,7 @@ const BlogForm = ({type}) => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Content</label>
+                <label className="form-label">내용</label>
                 <CKEditor
                     className="form-control"
                     editor={ ClassicEditor }
@@ -55,7 +55,7 @@ const BlogForm = ({type}) => {
                 className="btn btn-primary"
                 onClick={onSubmit}
             >
-                Post
+                작성
             </button>
         </div>
     )

@@ -29,9 +29,9 @@ const EditForm = ({ id,type }) => {
     useEffect(() => { getOrigin() }, [])
     return (
         <div>
-            <h1>Edit a post</h1>
+            <h1>글 수정</h1>
             <div className="mb-3">
-                <label className="form-label">Title</label>
+                <label className="form-label">제목</label>
                 <input className="form-control" value={title}
                     onChange={(event) => {
                         setTitle(event.target.value)
@@ -39,7 +39,7 @@ const EditForm = ({ id,type }) => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Content</label>
+                <label className="form-label">내용</label>
                 <CKEditor
                     className="form-control"
                     editor={ ClassicEditor }
@@ -65,7 +65,7 @@ const EditForm = ({ id,type }) => {
                 className="btn btn-primary"
                 onClick={onSubmit}
             >
-                Confirm
+                수정하기
             </button>
         </div>
     )

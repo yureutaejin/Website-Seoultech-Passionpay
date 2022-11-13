@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
 
-function LoginPage() {
+function Login() {
 
     const dispatch = useDispatch();
 
@@ -50,4 +50,4 @@ function LoginPage() {
     )
 }
 
-export default LoginPage;
+export default Login;

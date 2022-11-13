@@ -6,11 +6,15 @@ import ShowPage from './pages/ShowPage'
 import ProjectPage from './pages/ProjectPage'
 import NotiPage from './pages/NotiPage'
 import HistoryPage from './pages/HistoryPage'
-
+import LoginPage from './pages/LoginPage'
 const routes = [
     {
         path: '/',
         component: HomePage
+    },
+    {
+        path: '/login',
+        component: LoginPage
     },
     {
         path: '/notification',
