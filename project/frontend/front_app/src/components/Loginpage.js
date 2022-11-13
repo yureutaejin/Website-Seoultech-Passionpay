@@ -37,7 +37,7 @@ function LoginPage() {
             <form style={{ display: 'flex', flexDirection: 'column'}}
                 onSubmit={onSubmitHandler}
             >
-                <label>Email</label>
+                <label>Id</label>
                 <input type='id' value={Id} onChange={onIdHandler}/>
                 <label>Password</label>
                 <input type='password' value={Password} onChange={onPasswordHandler}/>
