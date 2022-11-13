@@ -6,19 +6,6 @@ import {
 import NavBar from './components/NavBar'
 import routes from './route'
 import React from 'react';
-import Login from '@components/Login';
- 
-function App () {
- 
-  return (
-    <div>
-      <Login />
-    </div>
-  )
-}
- 
-export default App;
-
 
 function App() {
   return (
