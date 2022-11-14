@@ -1,9 +1,10 @@
-import "./HomePage.module.css";
+import styles from "./HomePage.module.css";
 
 const HomePage = () => {
     return (
         <div>
-            <div className="HomeIMG" />
+            <div className={styles.HomeIMG} />
+            {/* <img src="/assets/HomeIMG.png"></img> */}
         </div>
     )
 }
