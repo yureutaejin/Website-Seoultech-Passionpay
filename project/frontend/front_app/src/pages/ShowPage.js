@@ -7,8 +7,8 @@ const ShowPage = () => {
     const id = useParams().id
     const type = useParams().type
     const mode = {
-        "blogs" : "posts",
-        "notification" : "noztidb"
+        "blogs": "posts",
+        "notification": "noztidb"
     }
 
     const [title, setTitle] = useState("")
@@ -22,11 +22,12 @@ const ShowPage = () => {
         })
     }
     const renderContents = () => {
+        const innerHTML = { __html: content }
         return (
             <div className="d-flex justify-content-between">
                 <div>
                     <h1>{title}</h1>
-                    <div>{content}</div>
+                    <div dangerouslySetInnerHTML={innerHTML} />
                 </div>
                 <div>
                     <Link to={`/${type}/edit/${id}`} className="btn btn-secondary">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { loginUser } from '../../../_actions/user_action';
+// import { loginUser } from '../../../_actions/user_action';
 
 function Login() {
 
@@ -20,27 +20,27 @@ function Login() {
 
         console.log('Id', Id);
         console.log('Password', Password);
-        
+
         let body = {
             Id: Id,
             password: Password,
         }
 
-        dispatch(loginUser(body));
+        // dispatch(loginUser(body));
     }
 
     return (
-        <div style={{ 
-            display: 'flex', justifyContent: 'center', alignItems: 'center', 
+        <div style={{
+            display: 'flex', justifyContent: 'center', alignItems: 'center',
             width: '100%', height: '100vh'
-            }}>
-            <form style={{ display: 'flex', flexDirection: 'column'}}
+        }}>
+            <form style={{ display: 'flex', flexDirection: 'column' }}
                 onSubmit={onSubmitHandler}
             >
                 <label>Id</label>
-                <input type='id' value={Id} onChange={onIdHandler}/>
+                <input type='id' value={Id} onChange={onIdHandler} />
                 <label>Password</label>
-                <input type='password' value={Password} onChange={onPasswordHandler}/>
+                <input type='password' value={Password} onChange={onPasswordHandler} />
                 <br />
                 <button formAction=''>
                     Login

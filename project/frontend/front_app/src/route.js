@@ -12,10 +12,10 @@ const routes = [
         path: '/',
         component: HomePage
     },
-    {
-        path: '/login',
-        component: LoginPage
-    },
+    // {
+    //     path: '/login',
+    //     component: LoginPage
+    // },
     {
         path: '/notification',
         component: NotiPage
@@ -36,7 +36,7 @@ const routes = [
     //     path: '/blogs/create',
     //     component: CreatePage
     // },
-    
+
     {
         path: '/:type/create',
         component: CreatePage
