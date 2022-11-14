@@ -1,4 +1,4 @@
-import HomePage from './pages/HomePage'
+import HomePage from './pages/HomePage/HomePage'
 import CreatePage from './pages/CreatePage'
 import EditPage from './pages/EditPage'
 import ListPage from './pages/ListPage'
@@ -12,10 +12,10 @@ const routes = [
         path: '/',
         component: HomePage
     },
-    // {
-    //     path: '/login',
-    //     component: LoginPage
-    // },
+    {
+        path: '/login',
+        component: LoginPage
+    },
     {
         path: '/notification',
         component: NotiPage

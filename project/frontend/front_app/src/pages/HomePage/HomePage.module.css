@@ -1,0 +1,9 @@
+.HomeIMG {
+    position: absolute;
+    width: 1280px;
+    height: 540px;
+    left: 0px;
+    top: 23px;
+
+    /* background-image: url(assets/HomeIMG.png), #929292; */
+}

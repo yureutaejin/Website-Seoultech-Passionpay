@@ -1,7 +1,9 @@
+import "./HomePage.module.css";
+
 const HomePage = () => {
     return (
         <div>
-            Home Page
+            <div className="HomeIMG" />
         </div>
     )
 }
