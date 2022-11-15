@@ -1,9 +1,57 @@
 .HomeIMG {
     position: absolute;
-    width: 1280px;
+    width: 1343px;
     height: 540px;
     left: 0px;
     top: 23px;
+}
 
-    /* background: url(./assets/HomeIMG.png); */
+.HomeLogo {
+    position: absolute;
+    width: 271px;
+    height: 246px;
+    left: 50px;
+    top: 111px;
+}
+
+.HomeDesc {
+    position: absolute;
+    width: 346px;
+    height: 38px;
+    left: 353px;
+    top: 301px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+}
+
+.Project_tag {
+    position: absolute;
+    width: 100px;
+    height: 18px;
+    left: 50px;
+    top: 488px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+}
+
+.bar {
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    left: 50px;
+    top: 524px;
+
+    background: #FFFFFF;
 }
