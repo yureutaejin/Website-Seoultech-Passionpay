@@ -18,3 +18,8 @@
 .card-body {
     padding: 13px;
 }
+
+.card-img {
+    position: absolute;
+    top: 84px;
+}
