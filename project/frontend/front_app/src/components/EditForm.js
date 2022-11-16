@@ -12,13 +12,13 @@ const EditForm = ({ id, type }) => {
 
     const getOrigin = () => {
         console.log(type)
-        axios.get(`http://localhost:3001/${mode[type]}/${id}`).then((res) => {
+        axios.get(`http://localhost:8080/${mode[type]}/${id}`).then((res) => {
             setTitle(res.data.title)
             setContent(res.data.content)
         })
     }
     const onSubmit = () => {
-        axios.put(`http://localhost:3001/${mode[type]}/${id}`, {
+        axios.put(`http://localhost:8080/${mode[type]}/${id}`, {
             title,
             content
         }

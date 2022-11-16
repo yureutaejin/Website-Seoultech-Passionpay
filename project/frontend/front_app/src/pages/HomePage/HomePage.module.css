@@ -30,13 +30,14 @@
     color: #FFFFFF;
 }
 
-.Project_Tag {
+.Project_Bunch {
     position: absolute;
-    width: 100px;
-    height: 18px;
-    left: 50px;
-    top: 488px;
+    top: -60px;
+    margin: 3px;
+    width: 150px;
+}
 
+.Project_Tag {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -50,8 +51,7 @@
     position: absolute;
     width: 100px;
     height: 4px;
-    left: 50px;
-    top: 524px;
+    top: 36px;
 
     background: #FFFFFF;
 }
@@ -59,7 +59,7 @@
 .Project_Container {
     position: absolute;
     left: 0px;
-    top: 525px;
-    height: 239px;
+    top: 518px;
+    height: 280;
     min-width: 1280px;
 }
