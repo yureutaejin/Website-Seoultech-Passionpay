@@ -5,12 +5,12 @@ import { Link } from "react-router-dom"
 import { useHistory } from "react-router"
 import LoadingSpinner from "../components/LoadingSpinner"
 
-const NotiPage = () => {    
+const NotiPage = () => {
     const history = useHistory()
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)
     const getPosts = () => {
-        axios.get('http://localhost:3001/notidb').then((res) => {
+        axios.get('http://localhost:8080/notidb').then((res) => {
             setPosts(res.data)
             setLoading(false)
         })
@@ -19,7 +19,7 @@ const NotiPage = () => {
 
     const deleteBlog = (e, id) => {
         e.stopPropagation()
-        axios.delete(`http://localhost:3001/notidb/${id}`).then(() => {
+        axios.delete(`http://localhost:8080/notidb/${id}`).then(() => {
             setPosts(prevPosts => prevPosts.filter(post => post.id !== id))
         })
     }
@@ -45,12 +45,12 @@ const NotiPage = () => {
     return (
         <div>
             <div className="d-flex justify-content-between">
-                    <h1>공지사항</h1>
-                    <div>
-                        <Link to="/notification/create" className="btn btn-success">
-                            Create New
-                        </Link>
-                    </div>
+                <h1>공지사항</h1>
+                <div>
+                    <Link to="/notification/create" className="btn btn-success">
+                        Create New
+                    </Link>
+                </div>
             </div>
             {loading ? <LoadingSpinner /> : renderBlogList()}
         </div>

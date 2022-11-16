@@ -1,7 +1,7 @@
-const Mode =
+const mode =
 {
-    "blogs" : "posts",
-    "notification" : "notidb"
+    "blogs": "posts",
+    "notification": "notidb"
 }
 
-export default Mode
+export default mode

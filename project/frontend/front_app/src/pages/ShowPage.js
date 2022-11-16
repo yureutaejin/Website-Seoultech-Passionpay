@@ -12,7 +12,7 @@ const ShowPage = () => {
     const [content, setContent] = useState("")
     const [loading, setLoading] = useState(true)
     const getContents = () => {
-        axios.get(`http://localhost:3001/${mode[type]}/${id}`).then((res) => {
+        axios.get(`http://localhost:8080/${mode[type]}/${id}`).then((res) => {
             setTitle(res.data.title)
             setContent(res.data.content)
             setLoading(false)

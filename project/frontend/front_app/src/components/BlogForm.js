@@ -10,7 +10,7 @@ const BlogForm = ({ type }) => {
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
     const onSubmit = () => {
-        axios.post(`http://localhost:3001/${mode[type]}`, {
+        axios.post(`http://localhost:8080/${mode[type]}`, {
             title,
             content
         }
