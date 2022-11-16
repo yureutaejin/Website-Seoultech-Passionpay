@@ -2,14 +2,11 @@ import { useParams, Link } from "react-router-dom"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import LoadingSpinner from "../components/LoadingSpinner"
+import mode from '../mode';
 
 const ShowPage = () => {
     const id = useParams().id
     const type = useParams().type
-    const mode = {
-        "blogs": "posts",
-        "notification": "noztidb"
-    }
 
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
