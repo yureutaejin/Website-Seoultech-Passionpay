@@ -1,2 +1,6 @@
 .DS_Store
 __pycache__/
+db/**
+!db/init/
+!db/.env
+frontend/node_modules/

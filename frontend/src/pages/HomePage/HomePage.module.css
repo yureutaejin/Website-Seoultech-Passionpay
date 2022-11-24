@@ -1,0 +1,65 @@
+.HomeIMG {
+    position: absolute;
+    min-width: 1280px;
+    height: 540px;
+    left: 0px;
+    top: 23px;
+}
+
+.HomeLogo {
+    position: absolute;
+    width: 271px;
+    height: 246px;
+    left: 50px;
+    top: 111px;
+}
+
+.HomeDesc {
+    position: absolute;
+    width: 346px;
+    height: 38px;
+    left: 353px;
+    top: 301px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+}
+
+.Project_Bunch {
+    position: absolute;
+    top: -60px;
+    margin: 3px;
+    width: 150px;
+}
+
+.Project_Tag {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+}
+
+.bar {
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    top: 36px;
+
+    background: #FFFFFF;
+}
+
+.Project_Container {
+    position: absolute;
+    left: 0px;
+    top: 518px;
+    height: 280;
+    min-width: 1280px;
+}
