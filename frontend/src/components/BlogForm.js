@@ -11,7 +11,7 @@ const BlogForm = ({ type }) => {
     const [content, setContent] = useState("")
     const [signid, setSignid] = useState("")
     const onSubmit = () => {
-        axios.post(`http://localhost:8080/api/${mode[type]}`, {
+        axios.post(`/api/${mode[type]}`, {
             subject: title,
             text: content,
             sign_id: signid

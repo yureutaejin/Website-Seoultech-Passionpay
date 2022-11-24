@@ -10,8 +10,8 @@ const ListPage = () => {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)
     const getPosts = () => {
-        axios.get('http://localhost:8080/api/board/').then((res) => {
-            setPosts(res[0])
+        axios.get('/api/board/').then((res) => {
+            setPosts(res["res"])
             setLoading(false)
         })
     }
@@ -19,7 +19,7 @@ const ListPage = () => {
 
     const deleteBlog = (e, id) => {
         e.stopPropagation()
-        axios.delete(`http://localhost:8080/api/posts/${id}`).then(() => {
+        axios.delete(`/api/posts/${id}`).then(() => {
             setPosts(prevPosts => prevPosts.filter(post => post.id !== id))
         })
     }
