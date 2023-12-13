@@ -1,3 +1,4 @@
+# TODO: Apply Multi-stages build for frontend build file
 version: '3.7'
 
 services:
